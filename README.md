@@ -129,9 +129,9 @@ sendemail
 
 Download the source from GitHub with:
 
-    mkdir blackbird
-    cd blackbird
-    git clone --recursive  git://github.com/butor/blackbird.git .
+    mkdir bitage
+    cd bitage
+    git clone --recursive  https://github.com/Toni-d-e-v/Bitage-Bitcoin-Arbitrage .
 
 Alternatively, if you already have the existing source tree use:
 
