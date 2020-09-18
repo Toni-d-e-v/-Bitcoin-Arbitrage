@@ -15,7 +15,7 @@
 #include "exchanges/wex.h"
 #include "exchanges/poloniex.h"
 #include "exchanges/gdax.h"
-#include "exchanges/exmo.h"
+//include "exchanges/exmo.h"
 #include "exchanges/cexio.h"
 #include "exchanges/bittrex.h"
 #include "exchanges/binance.h"
@@ -259,20 +259,7 @@ int main(int argc, char** argv) {
 
     index++;
   }
-  if (params.exmoEnable &&
-         (params.exmoApi.empty() == false || params.isDemoMode)) {
-    params.addExchange("Exmo", params.exmoFees, false, true);
-    getQuote[index] = Exmo::getQuote;
-    getAvail[index] = Exmo::getAvail;
-    sendLongOrder[index] = Exmo::sendLongOrder;
-    isOrderComplete[index] = Exmo::isOrderComplete;
-    getActivePos[index] = Exmo::getActivePos;
-    getLimitPrice[index] = Exmo::getLimitPrice;
-
-    dbTableName[index] = "exmo";
-    createTable(dbTableName[index], params);
-
-    index++;
+  
   }
   if (params.cexioEnable &&
          (params.cexioApi.empty() == false || params.isDemoMode)) {
